@@ -135,7 +135,7 @@ $f3->route(
 		$result = array();
 		for ($i = 1; $i < $params["count"]; $i++) {
 			$result[] = array(
-				"name" => $faker->name($params["gender"]),
+				"name" => $faker->name,
 				"phone" => $faker->phoneNumber,
 				"email" => $faker->email,
 				"address" => $faker->address
