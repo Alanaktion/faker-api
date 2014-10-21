@@ -128,8 +128,8 @@ $f3->route(
 	function($f3, $params) use($faker) {
 		$params += array("count" => 10);
 
-		if($params["count"] > 10000) {
-			$f3->error(400, "Count parameter cannot exceed 10000");
+		if($params["count"] > 1000) {
+			$f3->error(400, "Count parameter cannot exceed 1000");
 		}
 
 		$result = array();
