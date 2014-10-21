@@ -1,5 +1,11 @@
 <?php
 $f3 = require("lib/base.php");
+
+$locale = "en_US";
+if(!empty($_GET["locale"]) && in_array($_GET["locale"], array("ar_JO","bg_BG","bn_BD","cs_CZ","da_DK","de_AT","de_DE","el_GR","en_AU","en_CA","en_GB","en_NZ","en_PH","en_US","en_ZA","es_AR","es_ES","es_PE","es_VE","fi_FI","fr_BE","fr_CA","fr_FR","hu_HU","hy_AM","is_IS","it_IT","ja_JP","lv_LV","me_ME","ne_NP","nl_BE","nl_NL","pl_PL","pt_BR","pt_PT","ro_MD","ro_RO","ru_RU","sk_SK","sr_Cyrl_RS","sr_Latn_RS","sr_RS","sv_SE","tr_TR","uk_UA","zh_CN"))) {
+	$locale = $_GET["locale"];
+}
+
 $faker = Faker\Factory::create($locale);
 
 // Load local configuration if available
